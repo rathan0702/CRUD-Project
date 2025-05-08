@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: lightgreen;">
+
+    <center>
+        <div>
+            <form method="post" action="{% url 'save' %}">
+                {% csrf_token %}
+                <legend style="color: red;">CRUD APPLICATION FORM</legend>
+                <p><label for="name">Enter Name:</label></p>
+                <p><input type="text" name="name" required></p>
+
+                <p><label for="address">Enter Address:</label></p>
+                <p><input type="text" name="address" required></p>
+
+                <p><label for="mail">Enter Mail:</label></p>
+                <p><input type="text" name="mail" required></p>
+
+                <p><label for="age">Enter Age:</label></p>
+                <p><input type="text" name="age" required></p>
+
+            <p><input type="submit" value="insert"></p>
+            </form>
+            <p><a href="{% url 'display' %}">DISPLAY</a></p>
+        </div>
+    </center>
+    
+</body>
+</html>
